@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "d1058e9b-ac52-455e-a05f-62d75d813d08",
+		"name": "credit-module",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39639508"
+	},
+	"item": [
+		{
+			"name": "create-loan",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerId\": 1,\n    \"loanAmount\" : 10000,\n    \"numberOfInstallment\" : 6,\n    \"interestRate\" : 0.5\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/credit/create-loan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"credit",
+						"create-loan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list-loans",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerId\": 1,\n    \"loanAmount\" : null,\n    \"numberOfInstallment\" : null,\n    \"isPaid\" : null\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/credit/list-loans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"credit",
+						"list-loans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list-installments",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"loanId\": 1,\n    \"isPaid\" : false\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/credit/list-installments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"credit",
+						"list-installments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pay-loan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"loanId\": 1,\n    \"amount\" : 10000\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/credit/pay-loan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"credit",
+						"pay-loan"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
