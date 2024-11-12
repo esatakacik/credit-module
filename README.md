@@ -1,4 +1,6 @@
-                    Credit Module Challenge
+                        Credit Module Challenge
+Clone repository to local. Make sure jdk is java 21, do maven clean and install and run the project.
+                        
 The app uses h2 database and has 3 tables customer, loan and loanInstallment
 When app runs 3 customer record in resources/data.sql file added to customer table.
   1 Admin 1000000 limit, 2 Esat 100000, 3 User 1000
